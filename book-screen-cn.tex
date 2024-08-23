@@ -82,55 +82,55 @@
 \newcommand{\chapfont}{\fontsize{20pt}{20pt}\selectfont}
 %--- chapter ---
 \ctexset{
-    chapter = {
-        format = \linespread{1.0}\bfseries\chapfont\centering,
-        nameformat = {},
-        titleformat = {},
-        number = \arabic{chapter},
-        numberformat = {},
-        aftername = \quad,
-        beforeskip = {4pt},
-        afterskip = {24pt},
-        pagestyle = plain,
-    }
+  chapter = {
+    format = \linespread{1.0}\bfseries\chapfont\centering,
+    nameformat = {},
+    titleformat = {},
+    number = \arabic{chapter},
+    numberformat = {},
+    aftername = \quad,
+    beforeskip = {4pt},
+    afterskip = {24pt},
+    pagestyle = plain,
+  }
 }
 %--- section ---
 \ctexset{
-    section = {
-        format = \linespread{1.0}\bfseries\zihao{-3}\raggedright,
-        numberformat = {},
-        aftername = \quad,
-        beforeskip = {24pt},
-        afterskip = {6pt},
-    }
+  section = {
+    format = \linespread{1.0}\bfseries\zihao{-3}\raggedright,
+    numberformat = {},
+    aftername = \quad,
+    beforeskip = {24pt},
+    afterskip = {6pt},
+  }
 }
 %--- subsection ---
 \ctexset{
-    subsection = {
-        format = \linespread{1.0}\bfseries\zihao{4}\raggedright,
-        numberformat = {},
-        aftername = \quad,
-        beforeskip = {12pt},
-        afterskip = {6pt},
-    }
+  subsection = {
+    format = \linespread{1.0}\bfseries\zihao{4}\raggedright,
+    numberformat = {},
+    aftername = \quad,
+    beforeskip = {12pt},
+    afterskip = {6pt},
+  }
 }
 %--- subsubsection ---
 \ctexset{
-    subsubsection = {
-        format = \linespread{1.0}\bfseries\zihao{-4}\raggedright,
-        numberformat = {},
-        aftername = \quad,
-        beforeskip = {12pt},
-        afterskip = {6pt},
-    }
+  subsubsection = {
+    format = \linespread{1.0}\bfseries\zihao{-4}\raggedright,
+    numberformat = {},
+    aftername = \quad,
+    beforeskip = {12pt},
+    afterskip = {6pt},
+  }
 }
 %--- appendix ---
 \ctexset{
-    appendix = {
-        name = {附录},
-        numbering = true,
-        number = \Alph{chapter},
-    }
+  appendix = {
+    name = {附录},
+    numbering = true,
+    number = \Alph{chapter},
+  }
 }
 
 %----- 设置编号格式 -----
@@ -268,15 +268,15 @@
 \usepackage{background}
 \backgroundsetup{scale=1,opacity=1,angle=0,contents={%
 \begin{tikzpicture}[remember picture,overlay]
-    \pgfmathtruncatemacro{\colorindex}{mod(\value{page},10)}
-    % 设置纯色背景
-    \fill[bgcolor] (-0.5\paperwidth,-0.5\paperheight) rectangle (0.5\paperwidth,0.5\paperheight);
-    % 计算要绘制圆角矩形的位置
-    \coordinate (SW) at ($(-0.5\paperwidth,-0.5\paperheight) + (0.41cm,0.41cm)$);
-    \coordinate (NE) at ($(0.5\paperwidth,0.5\paperheight) + (-0.41cm,-0.41cm)$);
-    % 添加一个圆角矩形
-    \filldraw[fill=incolor\colorindex, rounded corners=1.0cm, draw=bdcolor, line width=0.8pt]
-    (SW) rectangle (NE);
+  \pgfmathtruncatemacro{\colorindex}{mod(\value{page},10)}
+  % 设置纯色背景
+  \fill[bgcolor] (-0.5\paperwidth,-0.5\paperheight) rectangle (0.5\paperwidth,0.5\paperheight);
+  % 计算要绘制圆角矩形的位置
+  \coordinate (SW) at ($(-0.5\paperwidth,-0.5\paperheight) + (0.41cm,0.41cm)$);
+  \coordinate (NE) at ($(0.5\paperwidth,0.5\paperheight) + (-0.41cm,-0.41cm)$);
+  % 添加一个圆角矩形
+  \filldraw[fill=incolor\colorindex, rounded corners=1.0cm, draw=bdcolor, line width=0.8pt]
+  (SW) rectangle (NE);
 \end{tikzpicture}}
 }
 
@@ -284,22 +284,22 @@
 %----- 设置封面 -----
 \makeatletter
 \renewcommand*{\maketitle}{
-    \begin{titlepage}
-    \thispagestyle{plain}
-    \setcounter{page}{0}
-    \vspace*{2.5\baselineskip}
-    \begin{center}
-        {\bfseries\huge \@title}
-    \end{center}
-    \vspace*{1\baselineskip}
-    \begin{center}
-        \Large\kaishu
-        \begin{tabular}{c}
-        \@author \\[5pt]
-        \@date \\
-        \end{tabular}
-    \end{center}
-    \vfill
+  \begin{titlepage}
+  \thispagestyle{plain}
+  \setcounter{page}{0}
+  \vspace*{2.5\baselineskip}
+  \begin{center}
+    {\bfseries\huge \@title}
+  \end{center}
+  \vspace*{1\baselineskip}
+  \begin{center}
+    \Large\kaishu
+    \begin{tabular}{c}
+    \@author \\[5pt]
+    \@date \\
+    \end{tabular}
+  \end{center}
+  \vfill
 \end{titlepage}
 \restoregeometry
 }
@@ -343,12 +343,12 @@
 \renewcommand{\proofname}{证明}
 \makeatletter
 \renewenvironment{proof}[1][\proofname]{\par
-    \pushQED{\qed}%
-    \normalfont \topsep6\p@\@plus6\p@\relax
-    \trivlist\item[\hskip\labelsep
-    \bfseries #1\@addpunct{\,:\,}]\ignorespaces
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist\item[\hskip\labelsep
+  \bfseries #1\@addpunct{\,:\,}]\ignorespaces
 }{%
-    \popQED\endtrivlist\@endpefalse
+  \popQED\endtrivlist\@endpefalse
 }
 \makeatother
 
@@ -477,7 +477,7 @@
 
 数学公式的使用请参考《一份(不太)简短的 \LaTeX~2$\varepsilon$ 介绍》 (lshort-zh-cn), 更多的数学符号参考 The Comprehensive LaTeX Symbol List (symbols-a4).
 
-自定义命令表示的几个数学符号 $\RR$, $\CC$, $\A$, $\ii$, $\bA$. 微分符号 $\dif$ 以及 $\dx$, $\dx[t]$.
+自定义命令表示的几个数学符号 $\RR$, $\CC$, $\A$, $\ii$, $\bA$, 微分符号 $\dif$ 以及 $\dx$, $\dx[t]$.
 
 在文中行内公式可以这么写: $a^2+b^2=c^2$, 这是勾股定理, 它还可以表示为 $c=\sqrt{a^2+b^2}$, 还可以让公式单独一段并且加上编号
 \begin{equation}\label{eq:trifun}
@@ -570,7 +570,7 @@ aligned 与 equation 环境套用, 公式间距自动调节, 如果有分式, �
 
 \begin{myshadowbox}
 \begin{lemma}\label{lmm:convergence} {\rm (\textit{参考文献}\cite{LiLiu1997})}
-假设单步法具有 $p$ 阶精度, 且増量函数 $\varphi(x_{n}, u_{n}, h)$ 关于 $u$ 满足 \textup{Lipschitz} 条件
+假设单步法具有 $p$ 阶精度, 且増量函数 $\varphi(x_{n}, u_{n}, h)$ 关于 $u$ 满足 Lipschitz 条件
 \begin{equation}\label{eq:conver1}
 |\varphi(x, u, h)-\varphi(x, \bar{u}, h)| \leqslant L_{\varphi}|u-\bar{u}|.
 \end{equation}
@@ -578,7 +578,7 @@ aligned 与 equation 环境套用, 公式间距自动调节, 如果有分式, �
 \end{myshadowbox}
 
 \begin{theorem}\label{thm:convergence}
-假设单步法具有 $p$ 阶精度, 且増量函数 $\varphi(x_{n}, u_{n}, h)$ 关于 $u$ 满足\textup{Lipschitz} 条件
+假设单步法具有 $p$ 阶精度, 且増量函数 $\varphi(x_{n}, u_{n}, h)$ 关于 $u$ 满足 Lipschitz 条件
 \begin{equation}\label{eq:conver2}
 |\varphi(x, u, h)-\varphi(x, \bar{u}, h)| \leqslant L_{\varphi}|u-\bar{u}|.
 \end{equation}
@@ -735,7 +735,7 @@ aligned 与 equation 环境套用, 公式间距自动调节, 如果有分式, �
 
 \section{图的使用}
 
-XeLaTeX 环境下可以插入 EPS、PDF、PNG、JPEG、BMP 格式的图片, 也可以用绘图包 (如 tikz 宏包) 直接在 \LaTeX 中绘制图形. 值得注意的是 figure 环境一个浮动体\index{浮动体}环境, LaTeX 不总是浮动体放在你想要的地方, 但是 LaTeX 总是保证浮动体的相对顺序, 所以对图片 \verb|\label| 和 \verb|\ref| 的交叉引用就显得尤为重要。
+XeLaTeX 编译环境下可以插入 EPS、PDF、PNG、JPEG、BMP 格式的图片, 也可以用绘图包 (如 tikz 宏包) 直接在 \LaTeX 中绘制图形. 值得注意的是 figure 环境一个浮动体\index{浮动体}环境, LaTeX 不总是浮动体放在你想要的地方, 但是 LaTeX 总是保证浮动体的相对顺序, 所以对图片 \verb|\label| 和 \verb|\ref| 的交叉引用就显得尤为重要。
 
 \section{插图示例}\label{sec:4-2}
 
@@ -757,7 +757,7 @@ XeLaTeX 环境下可以插入 EPS、PDF、PNG、JPEG、BMP 格式的图片, 也�
   \label{fig:twofigs}
 \end{figure}
 
-
+\clearpage
 使用 minipage 排版并排插图, 每个图都有单独的标题. 通过 \verb|autoref| 引用图片: \autoref{fig:A} 与 \autoref{fig:B}.
 \begin{figure}[htp!]
 \begin{minipage}[t]{0.48\linewidth}
@@ -768,10 +768,10 @@ XeLaTeX 环境下可以插入 EPS、PDF、PNG、JPEG、BMP 格式的图片, 也�
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.48\linewidth}
-\centering
-   \includegraphics[width=0.9\linewidth]{image2}
-   \caption{图二的描述.}
-   \label{fig:B}
+  \centering
+  \includegraphics[width=0.9\linewidth]{image2}
+  \caption{图二的描述.}
+  \label{fig:B}
 \end{minipage}
 \end{figure}
 
@@ -800,44 +800,92 @@ XeLaTeX 环境下可以插入 EPS、PDF、PNG、JPEG、BMP 格式的图片, 也�
 
 \section{表的使用}
 
-LaTeX 的 table 环境是一个浮动体\index{浮动体}环境, 排版与 figure 环境类似. 作为书籍, 推荐使用三线表进行排版. 一般的三线表\index{三线表}, 标题前后有横线, 表格最后有横线. %当然也可以根据需要在合适的地方加线.
+LaTeX 的 table 环境是一个浮动体, 与 figure 环境的排版方式类似. 简单的表格可以使用三线表进行排版, 其结构是仅在标题的上下以及表格的最下方添加横线.
 
-本文基于 tabularx 宏包定义了新的的左中右 (LCR) 格式, tabularx 环境需要先定义表格的总宽度, LCR 三个格式根据表格的总宽度自行控制列宽, 且其宽度相等. 本模板还定义了命令 \verb|P{}|, 它设置某一列宽度且内容居中 (如 \verb|P{1cm}| 控制某一列的宽度为 1cm), 实际上 \verb|P{}| 命令是在 \verb|p{}| 命令的基础上增加了居中功能.
+排版表格最基本的环境是 tabular 环境, 适合大多数需求. 如果想要控制表格行列间距, 可使用命令 \verb|\tabcolsep| 和 \verb|\arraystretch|, 它们分别控制列间距和行间距. 例如, \verb|\tabcolsep{10pt}| 表示列间距为 10pt, 默认是 6pt,  \verb|\arraystretch{1.2}| 表示行间距为 1.2 倍, 默认是 1 倍间距.
 
-\section{表格示例}\label{sec:5-2}
+本文基于 array 宏包定义了新的列类型 \verb|LCR| 格式, 实现了居左、居中和居右的对齐方式, 可用于 tabularx 环境. tabularx 环境要求先指定表格的总宽度, \verb|LCR| 三个格式根据表格的总宽度自动调整列宽, 使其相等. 本模板还定义了新的列类型 \verb|P{}|, 可用于 tabular 和 tabularx 环境, 它允许指定某列的宽度并使其内容居中 (如 \verb|P{1cm}| 控制某一列的宽度为 1cm), 实际上 \verb|P{}| 是在 \verb|p{}| 的基础上增加了居中功能.
 
-如下表格: 表~\ref{tab:heightweight}. 通过 \verb|autoref| 引用表格: \autoref{tab:heightweight}.
+\subsection{表格示例}
 
-\begin{table}[!htp]
+使用 tabular 环境, 如下表格: 表~\ref{tab:foo}. 通过 \verb|autoref| 引用表格: \autoref{tab:foo}.
+
+\begin{table}[htp!]
 \centering
-% PLCR已经定义
-\caption{某校学生升高体重样本}
-\label{tab:heightweight}
-\begin{tabularx}{0.9\textwidth}{lCCC}
-   \toprule
-  序号 & 年龄 & 身高 & 体重 \\
-  \midrule
-  001 & 15 & 156 & 42 \\
-  002 & 16 & 158 & 45 \\
-  003 & 14 & 162 & 48 \\
-  004 & 15 & 163 & 50 \\
-    \cmidrule{2-4}
-  平均 & 15 & 159.75 & 46.25 \\
-  \bottomrule
-\end{tabularx}
+\setlength{\tabcolsep}{12pt}  % 6pt standard
+\renewcommand{\arraystretch}{1.2}
+\caption{学术活动安排样例}
+\label{tab:foo}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{日期}  & \textbf{地点} & \textbf{活动名称} & \textbf{备注} \\ \hline
+2024年8月1日      & 上海       & 学术研讨会      & 主题：人工智能 \\ \hline
+2024年8月15日    & 北京       & 学术交流会      & 重点：数学建模 \\ \hline
+2024年9月1日      & 深圳       & 研究研讨会      & 主题：数据科学 \\ \hline
+2024年10月15日  & 广州       & 创新论坛         & 重点：科技创新 \\ \hline
+\end{tabular}
 \end{table}
 
 \clearpage
-基于 tabular 环境设置一些格式: 上下表格线加粗, 如表~\ref{tab:error1}.
-\begin{table}[!htp]
+使用 tabularx 环境, 如下表格: 表~\ref{tab:heightweight}.
+
+\clearpage
+\begin{table}[htp!]
+\centering
+% PLCR已经定义
+\caption{某校学生身高体重样本}
+\renewcommand\arraystretch{0.92}
+\label{tab:heightweight}
+\begin{tabularx}{0.9\textwidth}{P{1.5cm}CCC}
+\toprule
+序号 & 年龄 & 身高 & 体重 \\
+\midrule
+001 & 15 & 156 & 42 \\
+002 & 16 & 158 & 45 \\
+003 & 14 & 162 & 48 \\
+004 & 15 & 163 & 50 \\
+\cmidrule{2-4}
+平均 & 15 & 159.75 & 46.25 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+\begin{table}[htp!]
+\centering
+\caption{论文进度安排}
+%\renewcommand\arraystretch{1.1}
+\begin{tabular}{|P{4cm}|P{8cm}|}
+\Xhline{2\arrayrulewidth}
+论文起止时间   &   论文筹备过程 \\
+\hline
+20xx.xx -- 20xx.xx   &  论文定题, 整理相关文献 \\
+\hline
+20xx.xx -- 20xx.xx   &  审查、修改、完成开题报告 \\
+\hline
+20xx.xx -- 20xx.xx   &  对论文排版、初步完成论文初稿 \\
+\hline
+20xx.xx -- 20xx.xx   &  毕业论文预答辩 \\
+\hline
+20xx.xx -- 20xx.xx   &  论文定稿 \\
+\hline
+20xx.xx -- 20xx.xx   &  毕业论文答辩 \\
+\Xhline{2\arrayrulewidth}
+\end{tabular}
+\end{table}
+
+\clearpage
+基于 tabular 环境设置一些格式: 上下表格线加粗, 如表~\ref{tab:error}.
+\begin{table}[htp!]
 %\small
 \centering
-%\renewcommand\arraystretch{1.1} %定义表格高度
+%\setlength{\tabcolsep}{8pt}
+%\renewcommand\arraystretch{1.1}
 \caption{数值误差与收敛速率示例}
-\label{tab:error1}
+\label{tab:error}
 \begin{tabular}{c|c|cc|cc|cc}
 \Xhline{2\arrayrulewidth}
-degree & step-size~$h$ & $L^2$-errors & order & $H^1$-errors & order & $L^\infty$-errors & order \\
+逼近次数 & 步长 $h$ & $L^2$ 误差 & 收敛阶 & $H^1$ 误差 & 收敛阶 & $L^\infty$ 误差 & 收敛阶 \\
 \hline
   & 1/128 & 9.18E-06 & 2.02 & 7.70E-03 & 1.01  & 6.46E-07 & 2.02 \\
 1 & 1/256 & 2.29E-06 & 2.01 & 1.92E-03 & 1.00  & 1.61E-07 & 2.01 \\
@@ -854,44 +902,20 @@ degree & step-size~$h$ & $L^2$-errors & order & $H^1$-errors & order & $L^\infty
 \end{tabular}
 \end{table}
 
-基于 tabularx 环境设置一些格式, 如表~\ref{tab:error2}.
-\begin{table}[htp!]
-\centering
-%\renewcommand\arraystretch{1.1} %定义表格高度
-\caption{数值误差示例}
-\label{tab:error2}
-\begin{tabularx}{0.96\textwidth}{|P{0.8cm}|C|C|C|C|C|C|}
-\Xhline{2\arrayrulewidth}
-N  & A       & B    & C       & D      & E       & F   \\
-\Xhline{2\arrayrulewidth}
-2  & 9.20E-05 & 9.90E-05 & 1.00E-06 & 8.00E-06 & 1.50E-05 & 6.70E-05 \\
-4  & 9.80E-05 & 8.00E-05 & 7.00E-06 & 1.40E-05 & 1.60E-05 & 7.30E-05 \\
-6  & 4.00E-06 & 8.10E-05 & 8.80E-05 & 2.00E-05 & 2.20E-05 & 5.40E-05 \\
-8  & 8.50E-05 & 8.70E-05 & 1.90E-05 & 2.10E-05 & 3.00E-06 & 6.00E-05 \\
-10 & 8.60E-05 & 9.30E-05 & 2.50E-05 & 2.00E-06 & 9.00E-06 & 6.10E-05 \\
-12 & 1.70E-05 & 2.40E-05 & 7.60E-05 & 8.30E-05 & 9.00E-05 & 4.20E-05 \\
-14 & 2.30E-05 & 5.00E-06 & 8.20E-05 & 8.90E-05 & 9.10E-05 & 4.80E-05 \\
-16 & 7.90E-05 & 6.00E-06 & 1.30E-05 & 9.50E-05 & 9.70E-05 & 2.90E-05 \\
-18 & 1.00E-05 & 1.20E-05 & 9.40E-05 & 9.60E-05 & 7.80E-05 & 3.50E-05 \\
-20 & 1.10E-05 & 1.80E-05 & 1.10E-04 & 7.70E-05 & 8.40E-05 & 3.60E-05 \\
-\Xhline{2\arrayrulewidth}
-\end{tabularx}
-\end{table}
-
 
 
 %%%%%%%%%%%%%%%%% 生成参考文献 %%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
 \phantomsection
-\addcontentsline{toc}{section}{参考文献}
+\addcontentsline{toc}{chapter}{参考文献}
 
 % 生成参考文献, 两种方式任选一种
 
 % 第一种方式, 使用 bib 文件
 
 %\nocite{*}  % 可以暂时显示全部参考文献
-\bibliography{refs-cn}\label{refs}
+\bibliography{refs-cn}
 
 
 
